@@ -71,7 +71,7 @@ Streamlit (for the web UI)
 5. Project Structure
 Example structure:
 
-
+```
 ├── app/
 │   ├── web.py              # Streamlit app
 │   ├── preprocess.py       # transform_text and text utilities
@@ -79,13 +79,13 @@ Example structure:
 │       ├── vectorizer.pkl
 │       └── model.pkl
 ├── notebooks/
-│   └── 01_spam_eda_and_model.ipynb
+│   └── spam-detection.ipynb
 ├── data/
-│   └── README.md           # info/link to dataset
+│   └── dataset          
 ├── requirements.txt
 ├── README.md
-
-
+├── .gitignore
+```
 
 # Install dependencies
 pip install -r requirements.txt
