@@ -69,10 +69,9 @@ seaborn, matplotlib (for EDA and visualization)
 Streamlit (for the web UI)
 
 5. Project Structure
-Example structure (may vary slightly from your repo):
+Example structure:
 
-text
-.
+
 ├── app/
 │   ├── web.py              # Streamlit app
 │   ├── preprocess.py       # transform_text and text utilities
@@ -82,23 +81,15 @@ text
 ├── notebooks/
 │   └── 01_spam_eda_and_model.ipynb
 ├── data/
-│   └── README.md           # info / link to dataset
+│   └── README.md           # info/link to dataset
 ├── requirements.txt
 ├── README.md
 
-6. Setup & Installation
-bash
-# Clone the repository
-git clone https://github.com/<vrishankmalviya>/email-spam-classifier.git
-cd email-spam-classifier
 
-# Create and activate virtual environment
-python -m venv venv
-venv\Scripts\activate      # Windows
-# source venv/bin/activate # macOS / Linux
 
 # Install dependencies
 pip install -r requirements.txt
+
 
 7. Running the Streamlit App
 From the project root (or inside app/, depending on your structure):
@@ -109,6 +100,7 @@ streamlit run web.py
 Then open the provided local URL in your browser, enter an email/message in the text area, and the app will predict whether it is Spam or Ham using the trained model.
 
 8. Notes
+9. 
 Training and evaluation code (EDA, feature engineering, and model comparison between Gaussian, Multinomial, and Bernoulli Naive Bayes) are in the Jupyter notebook under notebooks/.
 
 The deployed Streamlit app uses the best-performing Naive Bayes model with TF‑IDF features tuned via max_features.
