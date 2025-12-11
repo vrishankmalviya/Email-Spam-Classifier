@@ -1,6 +1,6 @@
 import streamlit as st
 import pickle
-from app.preprocess import transform_text
+from preprocess import transform_text
 
 
 tfi=pickle.load(open('vectorizer.pkl','rb'))
