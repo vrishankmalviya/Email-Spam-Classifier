@@ -85,11 +85,11 @@ text
 │   └── README.md           # info / link to dataset
 ├── requirements.txt
 ├── README.md
-└── .gitignore
+
 6. Setup & Installation
 bash
 # Clone the repository
-git clone https://github.com/<your-username>/email-spam-classifier.git
+git clone https://github.com/<vrishankmalviya>/email-spam-classifier.git
 cd email-spam-classifier
 
 # Create and activate virtual environment
@@ -99,6 +99,7 @@ venv\Scripts\activate      # Windows
 
 # Install dependencies
 pip install -r requirements.txt
+
 7. Running the Streamlit App
 From the project root (or inside app/, depending on your structure):
 
