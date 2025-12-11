@@ -53,7 +53,7 @@ Confusion matrix
 
 Precision score
 
-The best-performing model (in terms of precision on the validation/test set) was saved and integrated into the Streamlit app.
+The best-performing model (based on precision on the validation/test set) was saved and integrated into the Streamlit app.
 
 4. Tech Stack
 ```
@@ -61,7 +61,7 @@ Python
 pandas, numpy
 NLTK
 scikit-learn
-seaborn, matplotlib (for EDA and visualization)
+seaborn, matplotlib (for EDA and visualisation)
 Streamlit (for the web UI)
 ```
 5. Project Structure
@@ -73,9 +73,9 @@ Streamlit (for the web UI)
 │   └── models/
 │       ├── vectorizer.pkl
 │       └── model.pkl
-├── notebooks/
+├── Notebook/
 │   └── spam-detection.ipynb
-├── data/
+├── Data/
 │   └── dataset          
 ├── requirements.txt
 ├── README.md
@@ -87,7 +87,7 @@ pip install -r requirements.txt
 
 
 7. Running the Streamlit App
-From the project root (or inside app/, depending on your structure):
+From the project root:
 
 bash
 cd app
@@ -96,6 +96,6 @@ Then open the provided local URL in your browser, enter an email/message in the 
 
 8. Notes
 
-Training and evaluation code (EDA, feature engineering, and model comparison between Gaussian, Multinomial, and Bernoulli Naive Bayes) are in the Jupyter notebook under notebooks/.
+The training and evaluation code (EDA, feature engineering, and model comparison between Gaussian, Multinomial, and Bernoulli Naive Bayes) is in the Jupyter notebook under notebooks/.
 
 The deployed Streamlit app uses the best-performing Naive Bayes model with TF‑IDF features tuned via max_features.
