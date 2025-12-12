@@ -9,13 +9,12 @@ ps = PorterStemmer()
 @st.cache_resource
 def ensure_nltk_data():
     
-    for res in ["punkt_tab", "punkt"]:
-        try:
-            nltk.data.find(f"tokenizers/{res}")
-        except LookupError:
-            nltk.download(res, quiet=True)
+    try:
+        nltk.data.find("tokenizers/punkt")
+    except LookupError:
+        nltk.download("punkt", quiet=True)
 
-    # Ensure stopwords corpus
+    
     try:
         nltk.data.find("corpora/stopwords")
     except LookupError:
@@ -26,7 +25,6 @@ ensure_nltk_data()
 
 def transform_text(text):
     text = text.lower()
-
     text = nltk.word_tokenize(text)
 
     y = []
