@@ -3,8 +3,8 @@ import pickle
 from preprocess import transform_text
 
 
-tfi=pickle.load(open('Models/vectorizer.pkl','rb'))
-model=pickle.load(open('Models/model.pkl','rb'))
+tfi=pickle.load(open('app/Models/vectorizer.pkl','rb'))
+model=pickle.load(open('app/Models/model.pkl','rb'))
 
 st.title("Spam Email Detection")
 
