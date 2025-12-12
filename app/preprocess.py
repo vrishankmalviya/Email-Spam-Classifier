@@ -9,10 +9,11 @@ ps = PorterStemmer()
 @st.cache_resource
 def ensure_nltk_data():
     
-    try:
-        nltk.data.find("tokenizers/punkt")
-    except LookupError:
-        nltk.download("punkt", quiet=True)
+    for res in ["punkt_tab", "punkt"]:
+        try:
+            nltk.data.find(f"tokenizers/{res}")
+        except LookupError:
+            nltk.download(res, quiet=True)
 
     
     try:
@@ -20,8 +21,8 @@ def ensure_nltk_data():
     except LookupError:
         nltk.download("stopwords", quiet=True)
 
-
 ensure_nltk_data()
+
 
 def transform_text(text):
     text = text.lower()
